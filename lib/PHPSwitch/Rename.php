@@ -88,7 +88,7 @@ class PHPSwitch_Rename
      */
     public function execute()
     {
-        PHPSwitch::_d("\$this->_oldName: $this->_oldName" . LF . "\$this->_newName: $this->_newName");
+        PHPSwitch::_d("Old name: $this->_oldName" . LF . "New name: $this->_newName");
         if ($res = rename($this->_oldName, $this->_newName)) {
             $this->_renamed = true;
         }

@@ -1,24 +1,26 @@
 @echo off
 
-:: configurable area:
-:: ------------------
-:: phpExePath    = The path to the php.exe (without the trailing backslash)
-:: phpSwitchPath = The path to the script, which does the php switch (without the trailing backslash)
-:: apacheService = Name of the Apache Service, if Apache is installed as a service
-::: set phpExePath=C:\Progs\xampp\php
-::: set phpSwitchPath=C:\Progs\phpswitch
-::: set apacheService=Apache2.2
+:: #################################################################################################
+:: PHP Switch batch file 
+:: @author      Murat Purc <murat@purc.de>
+:: @copyright 	2009 Murat Purc
+:: @license     http://www.opensource.org/licenses/bsd-license.php  BSD License
+:: @category    Development
+:: @package 	PHPSwitch
+:: @version     $Id$
+:: #################################################################################################
+
+
 
 :: set directory of this batch file
 set batchFileDir=%~dp0
-::echo  %CD%
-::echo %batchFileDir%
-::goto END
 
+:: some default settings
 set phpExePath=""
 set phpSwitchPath=""
 set apacheService=""
 
+:: read config.ini
 for /f "tokens=1,2 delims==" %%a in (%batchFileDir%config.ini) do (
     if %%a==phpExePath set phpExePath=%%b
     if %%a==apacheService set apacheService=%%b
