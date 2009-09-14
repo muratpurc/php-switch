@@ -59,28 +59,28 @@ PHP-Installationen
      in "C:\xampp\php\php5apache2_2_filter.dll"
 
 3. Download einer XAMPP Installation, mit einer älteren PHP Version als 5.3.0, z. B. 
-   die XAMPP 1.7.0, in der PHP 5.2.8 enthalten ist.
-   (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.7/xampp-win32-1.7.0.zip/download)
+   die XAMPP 1.7.1, in der PHP 5.2.9 enthalten ist.
+   (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.7/xampp-win32-1.7.1.zip/download)
    HINWEIS:
    Wir brauchen nur die zip-Version, da wir keine erneuete Installation durchführen.
 
-4. Kopieren des PHP-Ordners aus xampp-win32-1.7.0.zip in das XAMPP-Installationsverzeichnis.
+4. Kopieren des PHP-Ordners aus xampp-win32-1.7.1.zip in das XAMPP-Installationsverzeichnis.
    z. B.
-   Kopieren von "xampp-win32-1.7.0.zip\xampp\php\" in "C:\xampp\php_5.2.8\".
+   Kopieren von "xampp-win32-1.7.1.zip\xampp\php\" in "C:\xampp\php_5.2.9\".
    HINWEIS:
-   Das Zielverzeichnis heißt diesmal php_5.2.8, enthält also das Format php_{version}
+   Das Zielverzeichnis heißt diesmal php_5.2.9, enthält also das Format php_{version}
    Das gilt auch für alle anderen PHP-Installationen.
 
-5. Eine Datei PHP_VERSION (ohne Dateiendung) im Verzeichnis "C:\xampp\php_5.2.8\" erstellen, und die 
-   Version von PHP (z. B. 5.2.8) in die Datei schreiben.
+5. Eine Datei PHP_VERSION (ohne Dateiendung) im Verzeichnis "C:\xampp\php_5.2.9\" erstellen, und die 
+   Version von PHP (z. B. 5.2.9) in die Datei schreiben.
 
-6. Falls im PHP-Verzeichnis ("C:\xampp\php_5.2.8\") die DLLs php5apache2_2.dll und 
+6. Falls im PHP-Verzeichnis ("C:\xampp\php_5.2.9\") die DLLs php5apache2_2.dll und 
    php5apache2_2_filter.dll fehlen, sind diese aus dem Apache Modules-Verzeichnis die PHP DLL's in 
    das PHP-Verzeichnis zu kopieren.
-   - Kopieren von "xampp-win32-1.7.0.zip\apache\modules\php5apache2_2.dll" 
-     in "C:\xampp\php_5.2.8\php5apache2_2.dll"
-   - Kopieren von "xampp-win32-1.7.0.zip\apache\modules\php5apache2_2_filter.dll" 
-     in "C:\xampp\php_5.2.8\php5apache2_2_filter.dll"
+   - Kopieren von "xampp-win32-1.7.1.zip\apache\modules\php5apache2_2.dll" 
+     in "C:\xampp\php_5.2.9\php5apache2_2.dll"
+   - Kopieren von "xampp-win32-1.7.1.zip\apache\modules\php5apache2_2_filter.dll" 
+     in "C:\xampp\php_5.2.9\php5apache2_2_filter.dll"
 
 
 Für jede weitere PHP-Installation sind die Schritte 3 - 6 erneuit durchzuführen.
@@ -161,14 +161,14 @@ Für die Verwendung von PHP Switch gibt es ein paar Konventionen, die zu beachten
    Beispiel:
    C:\xampp\
       php\
-      php_5.2.8\
+      php_5.2.9\
       php_5.2.0\
       ...
 
 2. Jeder PHP Installationsordner sollte mit dem gleichen Prefix beginnen. Das Format ist immer 
    php_{version}.
    Beispiel:
-   php, php_5.2.8, php_5.2.0
+   php, php_5.2.9, php_5.2.0
 
 3. In jedem PHP Installationsordner ist eine Datei mit der Bezeichnung PHP_VERSION (ohne Dateiendung) 
    abzulegen. Der Inhalt der Datei ist die PHP Version.
@@ -176,7 +176,7 @@ Für die Verwendung von PHP Switch gibt es ein paar Konventionen, die zu beachten
    Beispiel:
    C:\xampp\
       php\PHP_VERSION  ->  Inhalt 5.3.0
-      php_5.2.8\PHP_VERSION  ->  Inhalt 5.2.8
+      php_5.2.9\PHP_VERSION  ->  Inhalt 5.2.9
       php_5.2.0\PHP_VERSION  ->  Inhalt 5.2.0
 
 4. PHP Switch wechselt die PHP Installation, indem es die Verzeichnisse umbenennt.
