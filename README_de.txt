@@ -35,7 +35,7 @@ CHANGELOG
 ####################################################################################################
 VORAUSSETZUNGEN
 
-Eine vollständige und funktionsfähige XAMPP (oder jede andere WAMPP Server-Stack) Installation 
+Eine vollständige und funktionsfähige XAMPP (oder jeder andere WAMPP Server-Stack) Installation 
 auf einem Windows System (XP/Vista/2003).
 
 
@@ -62,7 +62,7 @@ PHP-Installationen
    die XAMPP 1.7.1, in der PHP 5.2.9 enthalten ist.
    (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.7/xampp-win32-1.7.1.zip/download)
    HINWEIS:
-   Wir brauchen nur die zip-Version, da wir keine erneuete Installation durchführen.
+   Wir brauchen nur die zip-Version, da wir keine erneute Installation durchführen.
 
 4. Kopieren des PHP-Ordners aus xampp-win32-1.7.1.zip in das XAMPP-Installationsverzeichnis.
    z. B.
@@ -83,7 +83,7 @@ PHP-Installationen
      in "C:\xampp\php_5.2.9\php5apache2_2_filter.dll"
 
 
-Für jede weitere PHP-Installation sind die Schritte 3 - 6 erneuit durchzuführen.
+Für jede weitere PHP-Installation sind die Schritte 3 - 6 erneut durchzuführen.
 
 
 Apache Konfiguration
@@ -115,7 +115,7 @@ PHP Switch installation:
      Wert: "C:\xampp\"
 
    - phpIgnoreDirs:
-     Verzeichnisse, die in "phpInstallationsPath" vorkommen, aber ignoeriert werden sollen.
+     Verzeichnisse, die in "phpInstallationsPath" vorkommen, aber ignoriert werden sollen.
      HINWEIS:
      Mehrere Verzeichnisse mit einem Komma trennen.
      Wert: "phpMyAdmin" oder "phpMyAdmin,phpOrdner,phpOrdner2"
@@ -193,15 +193,15 @@ FAQ
 
 Bei mir kann unter Vista der Apache Service nicht gestoppt/gestartet werden, was kann ich da machen?
 ----------------------------------------------------------------------------------------------------
-a.) Endweder den Apache Service manuell starten/stoppen. Damit PHP-Switch den Servicestatus nicht 
+a.) Entweder den Apache Service manuell starten/stoppen. Damit PHP-Switch den Servicestatus nicht 
     steuert, in der Konfiguration (config.ini) den Wert für apacheService leer lassen.
 b.) Unter Vista kann je nach Benutzer/Einstellung die Berechtigung zum Ausführen solcher Prozesse
     nicht ausreichen, das das Starten und Stoppen von Diensten Administratorrechte benötigt.
     Es ist aber mit folgender Vorgehensweise dennoch machbar:
-    - Eine Verküpfung von "php-switch.bat" erstellen
-    - Verküpfung markieren, rechte Maustaste klicken, danach im Kontextmenü auf "Eigenschaften"
+    - Eine Verknüpfung von "php-switch.bat" erstellen
+    - Verknüpfung markieren, rechte Maustaste klicken, danach im Kontextmenü auf "Eigenschaften"
       klicken
-    - Zum Register "Vernüpfung" wechseln
+    - Zum Register "Verknüpfung" wechseln
     - Auf den Button "Erweitert" klicken
     - Im neuen Fenster die Checkbox "Als Administrator ausführen" setzen
     - Alle Fenster mit Klick auf "OK" schließen
