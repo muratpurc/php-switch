@@ -230,12 +230,12 @@ class PHPSwitch
         while ($userInput == '0') {
 
             if ($currInstallation) {
-                PHPSwitch::_('Current running PHP version is ' . $currInstallation['version'] . LF
+                self::_('Current running PHP version is ' . $currInstallation['version'] . LF
                     . 'Die aktuell laufende PHP Version ist ' . $currInstallation['version'] . '!'
                 );
             }
 
-            PHPSwitch::_('Type number or "x" (exit) for selecting your choice!' . LF
+            self::_('Type number or "x" (exit) for selecting your choice!' . LF
                 . 'Gebe nun Nummer oder "x" (exit) zum auswaehlen ein!'
             );
 
@@ -246,7 +246,7 @@ class PHPSwitch
                 $options .= $p . ') Switch to PHP ' . $v . ' (zu PHP ' . $v . ' wechseln)' . LF;
             }
             $options .= 'x) Exit (Beenden)';
-            PHPSwitch::_($options);
+            self::_($options);
 
             $userInput = (trim(fgets($hStdin, 256)));
             sleep(1);
@@ -255,7 +255,7 @@ class PHPSwitch
             } else {
                 $pos = ((int) $userInput);
                 if ($pos <= 0 || $pos > count($installations)) {
-                    PHPSwitch::_('Invalid selection. Type number or "x" (exit) for selecting your choice!' . LF
+                    self::_('Invalid selection. Type number or "x" (exit) for selecting your choice!' . LF
                         . 'Ungueltige Auswahl. Gebe die Nummer oder "x" (exit) zum auswaehlen ein!'
                     );
                 } else {
@@ -286,7 +286,7 @@ class PHPSwitch
         $pos = $pos-1;
 
         $newInst = $installations[$pos];
-        PHPSwitch::_('Starting switch to PHP ' . $newInst['version'] . LF
+        self::_('Starting switch to PHP ' . $newInst['version'] . LF
             . 'Beginne mit dem Wechsel zu PHP ' . $newInst['version']
         );
 
@@ -364,7 +364,7 @@ class PHPSwitch
                 $this->_installations[] = array(
                     'path'    => $this->_cfg['phpInstallationsPath'] . $file,
                     'current' => ($file == $this->_cfg['phpDirName']),
-                    'version' => PHPSwitch::_readPHPVersion($this->_cfg['phpInstallationsPath'] . $file . '/PHP_VERSION')
+                    'version' => self::_readPHPVersion($this->_cfg['phpInstallationsPath'] . $file . '/PHP_VERSION')
                 );
             }
         }

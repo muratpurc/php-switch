@@ -105,6 +105,7 @@ class PHPSwitch_Rename
         if ($this->_renamed == false) {
             return true;
         }
+        PHPSwitch::_d("Undo: New name: $this->_newName" . LF . "Old name: $this->_oldName");
         if ($res = rename($this->_newName, $this->_oldName)) {
             $this->_renamed = false;
         }

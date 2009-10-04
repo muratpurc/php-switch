@@ -52,7 +52,7 @@ PHP-Installationen
    Version von PHP (z. B. 5.3.0) in die Datei schreiben.
 
 2. Falls im PHP-Verzeichnis ("C:\xampp\php\") die DLLs php5apache2_2.dll und 
-   php5apache2_2_filter.dll fehlen, sind diese aus dem Apache Modules-Verzeichnis die PHP DLL's in 
+   php5apache2_2_filter.dll fehlen, sind aus dem Apache Modules-Verzeichnis die PHP DLL's in 
    das PHP-Verzeichnis zu kopieren.
    - Kopieren von "C:\xampp\apache\modules\php5apache2_2.dll" in "C:\xampp\php\php5apache2_2.dll"
    - Kopieren von "C:\xampp\apache\modules\php5apache2_2_filter.dll" 
@@ -165,7 +165,7 @@ Für die Verwendung von PHP Switch gibt es ein paar Konventionen, die zu beachten
       php_5.2.0\
       ...
 
-2. Jeder PHP Installationsordner sollte mit dem gleichen Prefix beginnen. Das Format ist immer 
+2. Jeder PHP Installationsordner sollte mit dem gleichen Präfix beginnen. Das Format ist immer 
    php_{version}.
    Beispiel:
    php, php_5.2.9, php_5.2.0
@@ -181,11 +181,11 @@ Für die Verwendung von PHP Switch gibt es ein paar Konventionen, die zu beachten
 
 4. PHP Switch wechselt die PHP Installation, indem es die Verzeichnisse umbenennt.
    Die aktuelle PHP Installation hat immer die Bezeichnung "php". Wird zur einer anderen 
-   PHP Version gewechselt, ändert PHP den Ordnernamen in php_{version} um
+   PHP Version gewechselt, ändert PHP Switch den Ordnernamen in php_{version} um.
 
 5. Jede PHP Installation ist komplett eigenständig, es gibt keine Abhängigkeiten untereinander.
-   Aktualisierungen/Änderungen in den PEAR-Packages oder PHP-Modulen sind wirken sich nicht auf 
-   die anderen PHP-Installationen aus.
+   Aktualisierungen/Änderungen in den PEAR-Packages oder PHP-Modulen wirken sich nicht auf die 
+   anderen PHP-Installationen aus.
 
 
 ####################################################################################################
