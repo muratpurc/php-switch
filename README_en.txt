@@ -15,7 +15,14 @@ TOC (Table of contents)
 ####################################################################################################
 DESCRIPTION
 
-@todo
+PHP Switch provides the usage of multiple PHP 5 Versions on a Windows OS like XP, Vista or 2003.
+
+It was developed for a usage on a XAMPP installation, but it should also be applicable for other 
+systems.
+
+The descriptions/examples below act on the assumption that XAMPP is installed at "C:\xampp". This 
+could be different in your case.
+
 
 
 ####################################################################################################
@@ -29,7 +36,8 @@ CHANGELOG
 ####################################################################################################
 REQUIREMENTS
 
-@todo
+A complete and workable XAMPP (or just another WAMPP server stack) installation on a Windows system
+(XP/Vista/2003).
 
 
 

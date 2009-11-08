@@ -19,8 +19,8 @@ Unterstützt das Wechseln zwischen verschiedenen PHP 5 Versionen auf einem Window
 
 PHP Switch ist zwar für eine XAMPP Installation gemacht, kann aber für andere Systeme verwendet werden.
 
-Bei den folgenden Beispielen wird der XAMPP Installations-Pfad als "C:\xampp" angegeben. Dies kann
-je nach Installation ganz anders sein.
+Im Folgenden wird bei den Erklärungen/Beispielen davon ausgegangen, dass XAMPP unter "C:\xampp" 
+installiert ist. Dies kann je nach Installation ganz anders sein.
 
 
 
@@ -207,6 +207,34 @@ b.) Unter Vista kann je nach Benutzer/Einstellung die Berechtigung zum Ausführen
     - Alle Fenster mit Klick auf "OK" schließen
     Eine bebilderte Beschreibung gibt es unter:
     http://www.vistaclues.com/run-a-batch-file-as-an-administrator/
+
+
+Warum stürzt Apache beim Erstellen einer DB-Verbindung ab?
+----------------------------------------------------------
+Verschiedene PHP Versionen brauchen in der Regel verschiedene libmysql.dll. Wenn z. B. auf dem 
+System XAMPP 1.7.2 mit PHP 5.3.0 und danach noch PHP 5.2.11 installiert wurde, wird die 
+DB-Verbindung mit einer libmysql.dll aufgebaut, die aber nicht kompatibel zu PHP 5.2.11 ist. 
+Das bringt dann den Apachen zum Absturz. In der Ereignisanzeige findet man dann eine Fehlermeldung 
+wie:
+
+    Fehlerhafte Anwendung httpd.exe, Version 2.2.12.0, Zeitstempel 0x4a66dd7b, fehlerhaftes Modul 
+    php5ts.dll, Version 5.2.11.11, Zeitstempel 0x4ab130e3, Ausnahmecode 0xc0000005, Fehleroffset 
+    0x0000abbe, Prozess-ID 0x1318, Anwendungsstartzeit 01ca50dbe37eda67
+
+Um dieses Problem zu umgehen, sollte die richtige Version der libmysql.dll entsprechend der aktuell 
+laufenden PHP Version geladen werden. Das kann man erreichen, in dem z. B. die libmysql.dll aus den 
+verschiedenen Installationen jeweils in das PHP-Installationsverzeichnis kopiert wird.
+
+In XAMPP 1.7.2 liegt die libmysql.dll zusätzlich noch in folgenden Verzeichnissen:
+- C:\xampp\mysql\bin\
+- C:\xampp\apache\bin\
+
+Diese Versionen der libmysql.dll sollten entweder gelöscht oder z. B. in libmysql_old.dll umbenannt 
+werden.
+
+Damit die libmysql.dll aus dem PHP-Ordner auch anderen Applikationen bei Bedarf zur Verfügung steht, 
+sollte der Pfad zum PHP-Ordner noch der Umgebungsvariable PATH hinzufügt werden 
+(z. B. mit C:\xampp\php\).
 
 
 
